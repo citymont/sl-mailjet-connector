@@ -1,0 +1,26 @@
+service: sl-mailjet
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  apiKeys:
+    - keyMailjet
+  memorySize: 1024
+  credentials: ${file(./.env.yml):credentials}
+  stage: prod
+  region: eu-west-1
+  environment:
+    # replace these env variables with your mailjet account values
+    MJ_APIKEY_PUBLIC: YOUR_MJ_APIKEY_PUBLIC
+    MJ_APIKEY_PRIVATE: YOUR_MJ_APIKEY_PRIVATE
+    MJ_CONTACTLIST: YOUR_MJ_CONTACTLIST
+
+functions:
+  addContact:
+    handler: handler.addContact
+    events:
+      - http:
+          path: api/addContact
+          method: post
+          integration: lambda
+          cors: true

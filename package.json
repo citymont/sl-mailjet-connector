@@ -1,0 +1,14 @@
+{
+  "name": "sl-mailjet",
+  "version": "0.0.1",
+  "description": "mailjet nodejs serverless",
+  "main": "handler.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha *.test.js"
+  },
+  "author": "Thibaut Villemont",
+  "license": "MIT",
+  "dependencies": {
+    "node-mailjet": "^3.3.1"
+  }
+}

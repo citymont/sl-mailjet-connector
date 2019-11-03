@@ -1,0 +1,8 @@
+.serverless
+yarn.lock
+.env.yml
+node_modules
+
+#OS STUFF
+.DS_Store
+.tmp
