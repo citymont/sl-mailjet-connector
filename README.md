@@ -20,9 +20,7 @@ This example demonstrates how to add contact (with data) to a Mailjet list with 
 
 3. Get the ID of our list (into the url).
 
-4. Grab your PUBLIC and PRIVATE API KEY and plug those into the `serverless.yml` file in the next step.
-
-5. Set your `env` variables in `serverless.yml` with your Twilio account values.
+4. Grab your Mailjet PUBLIC and PRIVATE API KEY and plug those into the `serverless.yml` file in the next step.
 
   ```yml
   environment:
@@ -32,7 +30,7 @@ This example demonstrates how to add contact (with data) to a Mailjet list with 
     MJ_CONTACTLIST: YOUR_MJ_CONTACTLIST
   ```
 
-6. Install dependencies
+5. Install dependencies
 
 ```bash
   npm install
