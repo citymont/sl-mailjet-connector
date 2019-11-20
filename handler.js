@@ -36,16 +36,12 @@ module.exports.addContact = (event, context, callback) => {
                     "Value":data.firstname
                   },
                   {
-                    "Name":"prénom",
-                    "Value":data.firstname
-                  },
-                  {
                     "Name":"lastname",
                     "Value":data.lastname
                   },
                   {
-                    "Name":"nom",
-                    "Value":data.lastname
+                    "Name":"country",
+                    "Value":data.country
                   }
                 ]
               })
@@ -89,16 +85,12 @@ module.exports.addContact = (event, context, callback) => {
                       "Value":data.firstname
                     },
                     {
-                      "Name":"prénom",
-                      "Value":data.firstname
-                    },
-                    {
                       "Name":"lastname",
                       "Value":data.lastname
                     },
                     {
-                      "Name":"nom",
-                      "Value":data.lastname
+                      "Name":"country",
+                      "Value":data.country
                     }
                   ]
                 })

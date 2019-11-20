@@ -18,9 +18,15 @@ This example demonstrates how to add contact (with data) to a Mailjet list with 
 
 2. Sign up for a [Mailjet account](http://www.mailjet.com) and create a list.
 
-3. Get the ID of our list (into the url).
+3. Install dependencies
 
-4. Grab your Mailjet PUBLIC and PRIVATE API KEY and plug those into the `serverless.yml` file in the next step.
+```bash
+  npm install
+  ```
+
+4. Get the ID of our list (into the url).
+
+5. Grab your Mailjet PUBLIC and PRIVATE API KEY and plug those into the `serverless.yml` file in the next step.
 
   ```yml
   environment:
@@ -30,11 +36,29 @@ This example demonstrates how to add contact (with data) to a Mailjet list with 
     MJ_CONTACTLIST: YOUR_MJ_CONTACTLIST
   ```
 
-5. Install dependencies
+6. Update contact properties 
 
-```bash
-  npm install
+  Update the contact properties model ( eg : `firstname`, `lastname`, `country`) into `handler.js`
+
+
+  ```js
+  // handler.js:33 & handler.js:86
+  "Data":[
+  {
+    "Name":"firstname",
+    "Value":data.firstname
+  },
+  {
+    "Name":"lastname",
+    "Value":data.lastname
+  },
+  {
+    "Name":"country",
+    "Value":data.country
+  }
+  ]
   ```
+
 
 6. Invoke the function and add contact to the list 
 
